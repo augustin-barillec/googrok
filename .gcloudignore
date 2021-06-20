@@ -1,0 +1,12 @@
+/.idea/
+/.git/
+/__pycache__/
+/venv/
+/node_modules/
+
+/.gitignore
+/*.py
+/deploy_*.out
+/ngrok_*.out
+/package-lock.json
+/ngrok
