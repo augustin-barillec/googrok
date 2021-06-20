@@ -14,7 +14,8 @@ def get_port_url(i):
         time.sleep(2)
     r = r['tunnels'][1]
     port = int(r['config']['addr'].split('localhost:')[1])
-    url = r['public_url']
+    url = r['public_url'].split('//')[1]
+    url = 'https://{}'.format(url)
     return port, url
 
 
