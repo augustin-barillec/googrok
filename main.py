@@ -22,7 +22,7 @@ def main_deploy(project_id, ports, region):
 parser = argparse.ArgumentParser()
 parser.add_argument('action', type=str)
 parser.add_argument('--ports', nargs='+', type=int, required=True)
-parser.add_argument('--project_id', type=str)
+parser.add_argument('--project_id')
 parser.add_argument('--region')
 args = parser.parse_args()
 assert len(args.ports) <= 10
