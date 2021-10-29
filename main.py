@@ -29,7 +29,7 @@ assert len(args.ports) <= 10
 assert args.action in ('ngrok', 'deploy', 'ngrok_deploy')
 if 'deploy' in args.action:
     assert args.project_id is not None
-
+    assert args.region is not None
 if args.action == 'ngrok':
     main_ngrok(args.ports)
 elif args.action == 'deploy':
