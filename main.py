@@ -13,10 +13,10 @@ def main_ngrok(ports):
     ngrok_infos.create_index_js(port_to_url)
 
 
-def main_deploy(project_id, ports, region):
+def main_deploy(ports, project_id, region):
     clean.clean_deploy()
     for p in ports:
-        deploy.deploy(project_id, p, region)
+        deploy.deploy(p, project_id, region)
 
 
 parser = argparse.ArgumentParser()
@@ -33,7 +33,7 @@ if 'deploy' in args.action:
 if args.action == 'ngrok':
     main_ngrok(args.ports)
 elif args.action == 'deploy':
-    main_deploy(args.project_id, args.ports, args.region)
+    main_deploy(args.ports, args.project_id, args.region)
 elif args.action == 'ngrok_deploy':
     main_ngrok(args.ports)
-    main_deploy(args.project_id, args.ports, args.region)
+    main_deploy(args.ports, args.project_id, args.region)

@@ -2,7 +2,7 @@ import subprocess
 from basenames import build_deploy_basename
 
 
-def deploy(project_id, port, region=None):
+def deploy(port, project_id, region=None):
     deploy_basename = build_deploy_basename(port)
     command = f"""
     gcloud functions deploy proxy_{port} \

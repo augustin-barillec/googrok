@@ -1,5 +1,5 @@
 def build_ngrok_basename(port):
-    return 'ngrok_{port}.out'.format(port=port)
+    return f'ngrok_{port}.out'
 
 
 def build_index_basename():
@@ -7,4 +7,4 @@ def build_index_basename():
 
 
 def build_deploy_basename(port):
-    return 'deploy_{port}.out'.format(port=port)
+    return f'deploy_{port}.out'
